@@ -4,7 +4,7 @@
 [demo地址](https://github.com/Pangshishan/PSSSegmentControl-Swift.git)
 效果图如下：
 
-![图二](http://upload-images.jianshu.io/upload_images/5379614-f7dbe47dcb976d81.gif?imageMogr2/auto-orient/strip)
+![图片.gif](http://upload-images.jianshu.io/upload_images/5379614-7d805b6dbdaf1b98.gif?imageMogr2/auto-orient/strip)
 
 - 文件目录
 ![文件目录](http://upload-images.jianshu.io/upload_images/5379614-27a902a7664c790a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
