@@ -1,12 +1,5 @@
 # PSSSegmentControl-Swift
 模仿网易新闻首页顶部多个按钮(Swift版), 相当于UISegmentControl功能
-
-
-> 之前写过一个OC版的简易SegmentControl，按钮布局是平分的，样子是这个样子的(下图)
-[demo地址](https://github.com/Pangshishan/PSSSegmentControl.git)
-
-![图片](http://upload-images.jianshu.io/upload_images/5379614-6fb5e966ecdce7a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
 > 今天这款 是Swift版本的，布局使按照文本的长度，如果按钮个数少的话，是平分的，并且不可以滑动。如果按钮个数多，是平分的，可有滑动，并且会把点击到的按钮尽量放置在中间。
 [demo地址](https://github.com/Pangshishan/PSSSegmentControl-Swift.git)
 效果图如下：
