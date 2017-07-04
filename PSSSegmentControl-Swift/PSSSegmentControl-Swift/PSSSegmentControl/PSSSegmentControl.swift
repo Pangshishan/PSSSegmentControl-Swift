@@ -81,6 +81,7 @@ class PSSSegmentControl: UIView, PSSItemViewDelegate {
     // MARK: 私有属性
     private var scrollView: UIScrollView!
     private var ingoreSet: Bool = false
+    fileprivate var gradientLayer: CAGradientLayer!
     
     // MARK: 构造方法
     init(frame: CGRect, titleArray: [String]) {
@@ -111,6 +112,7 @@ class PSSSegmentControl: UIView, PSSItemViewDelegate {
         if let block = self.clickBlock {
             block(index)
         }
+        
     }
     
     // MARK: 重写方法
@@ -129,6 +131,9 @@ class PSSSegmentControl: UIView, PSSItemViewDelegate {
             let wid = item.itemWidth
             item.frame = CGRect.init(x: x, y: 0, width: wid, height: self.pss_height)
             x += (wid + margin)
+        }
+        if let gradientL = gradientLayer {
+            gradientL.frame = self.bounds
         }
     }
     // MARK: 私有方法
@@ -159,7 +164,7 @@ class PSSSegmentControl: UIView, PSSItemViewDelegate {
         }
     }
     private func layoutGradientLayer() {
-        let gradientLayer = CAGradientLayer.init()
+        gradientLayer = CAGradientLayer.init()
         gradientLayer.startPoint = CGPoint.init(x: 0, y: 0)
         gradientLayer.endPoint = CGPoint.init(x: 1, y: 0)
         gradientLayer.colors = [
@@ -179,6 +184,7 @@ class PSSSegmentControl: UIView, PSSItemViewDelegate {
         gradientLayer.locations = locations as [NSNumber]?
         gradientLayer.frame = self.bounds
         self.layer.addSublayer(gradientLayer)
+        
     }
     deinit {
         print("PSSSegmentControll - 被销毁了")

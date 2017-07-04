@@ -14,7 +14,7 @@ protocol PSSItemViewDelegate: NSObjectProtocol {
 
 class PSSItemView: UIButton {
 
-    let pss_inset: CGFloat = 10
+    let pss_inset: CGFloat = 2
     var pss_duration: CGFloat = 0.1
     var pss_scale: CGFloat = 1.1
     // MARK: 公开属性

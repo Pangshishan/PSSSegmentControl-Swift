@@ -14,7 +14,8 @@ import UIKit
 class ViewController: UIViewController, UIScrollViewDelegate {
     
     // MARK: 存储属性
-    let dataArr: [String] = ["00000000", "111", "222", "3333333", "44444", "5555555", "666666", "777777777"]
+    let dataArr: [String] = ["全部", "衣服", "手办", "抱枕", "衣服", "手办", "抱枕", "衣服", "手办", "抱枕"]
+//    let dataArr: [String] = ["全部", "衣服", "手办", "抱枕"]
     
     
     // MARK: 私有属性
@@ -36,10 +37,10 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         segmentC.normalColor = UIColor.lightGray
         segmentC.selectedColor = UIColor.orange
         segmentC.backgroundColor = UIColor.white
-        segmentC.pss_font = UIFont.systemFont(ofSize: 17)
-        segmentC.pss_margin = 20
+        segmentC.pss_font = UIFont.systemFont(ofSize: 15)
+        segmentC.pss_margin = 15
         segmentC.pss_duration = 0.2
-        segmentC.pss_scale = 1.2
+        segmentC.pss_scale = 1.3
         segmentC.selectedIndex = 0 // 这个需要给定初始值
         self.view.addSubview(segmentC)
         self.segmentC = segmentC
@@ -49,7 +50,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         segmentC.clickBlock = {
             (index: NSInteger) in
             weakSelf?.scrollView.setContentOffset(CGPoint.init(x: CGFloat(index) * kScreenWidth, y: 0), animated: true)
-            
+            if weakSelf?.segmentC.selectedIndex == index {
+                print("同一个");
+            }
         }
     }
     private func addScrollView() {
